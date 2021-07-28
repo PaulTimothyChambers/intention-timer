@@ -1,47 +1,50 @@
 <!-- <!DOCTYPE html> -->
 <html>
   <head>
-    <!-- <meta charset="UTF-8"> -->
+    <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" type="text/css">
   </head>
-    <body>
-      <section class="background">Intention Timer
-        <div class="new-activity">New activity
-          <div class="select-a-category">Select a category
-            <section class="category-buttons">
-              <button class="btn-activities" alt="Study-Button">
-                <text class="text-top-buttons">Study
-                  <img class="image-activities" src="assets/study.svg">
-                </text>
-              </button>
-              <div class="space-between"></div>
-              <button class="btn-activities" alt="Meditate-Button">
-                <text class="text-top-buttons">Meditate
-                  <img class="image-activities" src="assets/meditate.svg">
-                </text>
-              </button>
-              <div class="space-between"></div>
-              <button class="btn-activities" alt="Exercise-Button">
-                <text class="text-top-buttons">Exercises
-                  <img class="image-activities" src="assets/exercise.svg">
-                </text>
-              </button>
-            </section>
-            <text class="activity-text">What would you like to accomplish during this time?
-                <input type="text" class="input-activity"></input>
-            </text>
-            <input type="number" class="input-minutes">Minutes</input>
-            <input type="number" class="input-seconds">Seconds</input>
-            <button class="btn-start-activity">START ACTIVITY</button>
-          </div>
+    <body class="background">
+      <h1 class="text-header">INTENTION TIMER</h1>
+      <div class="new-activity">New activity
+        <div class="select-a-category">Select a category
+          <section class="category-buttons">
+            <button class="btn-activities" alt="Study-Button">
+              <text class="text-top-buttons">Study
+                <img class="image-activities" src="assets/study.svg">
+              </text>
+            </button>
+            <div class="space-between"></div>
+            <button class="btn-activities" alt="Meditate-Button">
+              <text class="text-top-buttons">Meditate
+                <img class="image-activities" src="assets/meditate.svg">
+              </text>
+            </button>
+            <div class="space-between"></div>
+            <button class="btn-activities" alt="Exercise-Button">
+              <text class="text-top-buttons">Exercises
+                <img class="image-activities" src="assets/exercise.svg">
+              </text>
+            </button>
+          </section>
+          <text class="activity-text">What would you like to accomplish during this time?
+            <input type="text" class="input-activity"></input>
+          </text>
+          <text class="actvity-minutes">Minutes
+            <input type="number" class="input-minutes"></input>
+          </text>
+          <text class="activity-seconds">Seconds
+            <input type="number" class="input-seconds"></input>
+          </text>
+          <button class="btn-start-activity">START ACTIVITY</button>
         </div>
-        <div class="past-activities">Past Activities
-          <div class="logged-activities">
-            <textarea class="no-logged-activities">You haven't logged any actvities yet. Complete the form to the left to get started!</textarea>
-          </div>
+      </div>
+      <div class="past-activities">Past Activities
+        <div class="logged-activities">
+          <textarea class="no-logged-activities">You haven't logged any actvities yet. Complete the form to the left to get started!</textarea>
         </div>
-      </section>
+      </div>
       <script type="text/javascript" src="main.js"></script>
     </body>
   </head>

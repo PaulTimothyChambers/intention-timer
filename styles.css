@@ -17,9 +17,20 @@ Error: #EFB7EC */
 .new-activity {
   display: flex;
   position: absolute;
-  height: 649px;
-  width: 1000px;
+  height: 100vh;
+  width: 1008px;
   top: 65px;
+  margin-left: -8px;
+  background-color: #2B2733;
+}
+
+.past-activities {
+  display: flex;
+  position: absolute;
+  height: 100vh;
+  width: 428px;
+  margin-top: 57px;
+  margin-left: 1003px;
   background-color: #2B2733;
 }
 
@@ -38,6 +49,15 @@ Error: #EFB7EC */
 .image-activities {
   max-height: 25px;
   max-width: 25px;
+}
+
+.text-header {
+  width: 100vh;
+  margin-left: 600px;
+  margin-top: 11px;
+  color: #FFF;
+  font-size: 25;
+  font-weight: 300;
 }
 
 .text-top-buttons {
@@ -70,16 +90,38 @@ Error: #EFB7EC */
   background-color: #46424D;
 }
 
-.btn-start-activity
+.btn-start-activity{
 
-.input-activity
+}
 
-.input-minutes
+.activity-text {
 
-.input-seconds
+}
 
-.past-activities
+.activity-minutes{
 
-.logged-activities
+}
 
-.no-logged-activities
+.activity-seconds{
+
+}
+
+.input-activity{
+
+}
+
+.input-minutes{
+
+}
+
+.input-seconds{
+
+}
+
+.logged-activities{
+
+}
+
+.no-logged-activities{
+
+}
