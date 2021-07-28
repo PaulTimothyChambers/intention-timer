@@ -1,0 +1,173 @@
+/* Main background: #2B2733
+Text on main background: #CBC9CF
+Header, cards: #46424D
+Card shadow: #26222D
+Text on header and cards: #FFF
+Study: #B3FD78
+Meditate: #C278FD
+Exercise: #FD8078
+Error: #EFB7EC */
+
+.background {
+  display: flex;
+  min-height: 100vh;
+  background-color: #46424D
+}
+
+.new-activity {
+  display: flex;
+  position: absolute;
+  height: 100vh;
+  width: 1008px;
+  top: 65px;
+  margin-left: -8px;
+  background-color: #2B2733;
+}
+
+.past-activities {
+  display: flex;
+  position: absolute;
+  height: 100vh;
+  width: 428px;
+  margin-top: 57px;
+  margin-left: 1003px;
+  background-color: #2B2733;
+  flex-direction: column;
+}
+
+.select-a-category {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  height: 544px;
+  width: 940px;
+  top: 65px;
+  left: 30px;
+  border-radius: 5px;
+  background-color: #46424D;
+}
+
+.image-activities {
+  max-height: 25px;
+  max-width: 25px;
+}
+
+.text-header {
+  width: 100vh;
+  margin-left: 600px;
+  margin-top: 11px;
+  color: #FFF;
+  font-size: 25;
+  font-weight: 300;
+}
+
+.text-card-header {
+padding-left: 30px;
+color: #FFF;
+}
+
+.category-text {
+padding-left: 154px;
+padding-top: 43px;
+color: #FFF;
+}
+
+.text-top-buttons {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  font-size: 15;
+  color: #FFF
+}
+
+.category-buttons {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  margin-left: 157px;
+  margin-top: 115px;
+}
+
+.space-between {
+  width: 125px;
+}
+
+.btn-activities {
+  height: 70px;
+  width: 125px;
+  border-color: #FFF;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #46424D;
+}
+
+.btn-start-activity{
+margin-top: 19px;
+margin-left: 577px;
+margin-right: 160px;
+border-radius: 5px;
+height: 45px;
+}
+
+.activity-text {
+  display: flex;
+  flex-direction: column;
+  margin-right: 151px;
+  margin-top: 144px;
+  margin-left: 149px;
+  color: #FFF;
+}
+
+.minutes-seconds {
+  display: flex;
+  flex-direction: row;
+  margin-top: 77px;
+  margin-left: 160px;
+  margin-right: 160px;
+  justify-content: space-between;
+}
+
+.activity-minutes{
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 76px;
+  color: #FFF;
+}
+
+.activity-seconds{
+  height: 76px;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  color: #FFF;
+}
+
+.input-activity{
+  background-color: #46424D;
+  border-bottom: #FFF;
+  border-top: #46424D;
+  border-right: #46424D;
+  border-left: #46424D;
+  border-style: solid;
+}
+
+.input-minutes{
+
+}
+
+.input-seconds{
+
+}
+
+.logged-activities{
+  display: flex;
+  justify-content: center;
+  color: #FFF;
+}
+
+.no-logged-activities{
+  text-align: center;
+  width: 75%;
+}

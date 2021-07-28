@@ -1,0 +1,56 @@
+<!-- <!DOCTYPE html> -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+  </head>
+    <body class="background">
+      <h1 class="text-header">INTENTION TIMER</h1>
+      <div class="new-activity">
+        <h2 class="text-card-header">New Activity</h2>
+        <div class="select-a-category">
+          <h3 class="category-text">Select a category:</h3>
+          <section class="category-buttons">
+            <button class="btn-activities" alt="Study-Button">
+              <text class="text-top-buttons">Study
+                <img class="image-activities" src="assets/study.svg">
+              </text>
+            </button>
+            <div class="space-between"></div>
+            <button class="btn-activities" alt="Meditate-Button">
+              <text class="text-top-buttons">Meditate
+                <img class="image-activities" src="assets/meditate.svg">
+              </text>
+            </button>
+            <div class="space-between"></div>
+            <button class="btn-activities" alt="Exercise-Button">
+              <text class="text-top-buttons">Exercises
+                <img class="image-activities" src="assets/exercise.svg">
+              </text>
+            </button>
+          </section>
+          <text class="activity-text">What would you like to accomplish during this time?
+            <input type="text" class="input-activity"></input>
+          </text>
+          <div class="minutes-seconds">
+            <text class="activity-minutes">Minutes
+              <input type="number" class="input-activity"></input>
+            </text>
+            <text class="activity-seconds">Seconds
+              <input type="number" class="input-activity"></input>
+            </text>
+          </div>
+          <button class="btn-start-activity">START ACTIVITY</button>
+        </div>
+      </div>
+      <div class="past-activities">
+        <h2 class="text-card-header">Past Activities</h2>
+        <div class="logged-activities">
+          <h4 class="no-logged-activities">You haven't logged any activities yet. Complete the form to the left to get started!</h4>
+        </div>
+      </div>
+      <script type="text/javascript" src="main.js"></script>
+    </body>
+  </head>
+</html>
