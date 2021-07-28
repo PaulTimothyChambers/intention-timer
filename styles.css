@@ -32,6 +32,7 @@ Error: #EFB7EC */
   margin-top: 57px;
   margin-left: 1003px;
   background-color: #2B2733;
+  flex-direction: column;
 }
 
 .select-a-category {
@@ -60,7 +61,7 @@ Error: #EFB7EC */
   font-weight: 300;
 }
 
-.new-activity-text {
+.text-card-header {
 padding-left: 30px;
 color: #FFF;
 }
@@ -102,11 +103,11 @@ color: #FFF;
 }
 
 .btn-start-activity{
-  margin-top: 364px;
-  margin-left: 577px;
-  margin-right: 160px;
-  border-radius: 5px;
-  height: 45px;
+margin-top: 19px;
+margin-left: 577px;
+margin-right: 160px;
+border-radius: 5px;
+height: 45px;
 }
 
 .activity-text {
@@ -152,7 +153,6 @@ color: #FFF;
   border-style: solid;
 }
 
-
 .input-minutes{
 
 }
@@ -162,9 +162,12 @@ color: #FFF;
 }
 
 .logged-activities{
-
+  display: flex;
+  justify-content: center;
+  color: #FFF;
 }
 
 .no-logged-activities{
-
+  text-align: center;
+  width: 75%;
 }
