@@ -35,17 +35,7 @@ Error: #EFB7EC */
   background-color: #46424D;
 }
 
-.image-study {
-  max-height: 25px;
-  max-width: 25px;
-}
-
-.image-meditate {
-  max-height: 25px;
-  max-width: 25px;
-}
-
-.image-exercise {
+.image-activities {
   max-height: 25px;
   max-width: 25px;
 }
