@@ -1,0 +1,92 @@
+/* Main background: #2B2733
+Text on main background: #CBC9CF
+Header, cards: #46424D
+Card shadow: #26222D
+Text on header and cards: #FFF
+Study: #B3FD78
+Meditate: #C278FD
+Exercise: #FD8078
+Error: #EFB7EC */
+
+.background {
+  display: flex;
+  min-height: 100vh;
+  background-color: #46424D
+}
+
+.new-activity {
+  display: flex;
+  position: absolute;
+  height: 649px;
+  width: 1000px;
+  top: 65px;
+  background-color: #2B2733;
+}
+
+.select-a-category {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  height: 544px;
+  width: 700px;
+  top: 65px;
+  left: 30px;
+  border-radius: 5px;
+  background-color: #46424D;
+}
+
+.image-study {
+  max-height: 20px;
+  max-width: 20px;
+}
+
+.image-meditate {
+  max-height: 20px;
+  max-width: 20px;
+}
+
+.image-exercise {
+  max-height: 20px;
+  max-width: 20px;
+}
+
+.category-buttons {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  margin: 100px;
+
+}
+
+.btn-study {
+  height: 70px;
+  width: 70px;
+}
+
+.space-between {
+  width: 100px;
+}
+
+.btn-meditate {
+  height: 70px;
+  width: 70px;
+}
+
+.btn-exercise {
+  height: 70px;
+  width: 70px;
+}
+
+.btn-start-activity
+
+.input-activity
+
+.input-minutes
+
+.input-seconds
+
+.past-activities
+
+.logged-activities
+
+.no-logged-activities
