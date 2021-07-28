@@ -28,7 +28,7 @@ Error: #EFB7EC */
   position: absolute;
   flex-direction: column;
   height: 544px;
-  width: 700px;
+  width: 940px;
   top: 65px;
   left: 30px;
   border-radius: 5px;
@@ -36,45 +36,48 @@ Error: #EFB7EC */
 }
 
 .image-study {
-  max-height: 20px;
-  max-width: 20px;
+  max-height: 25px;
+  max-width: 25px;
 }
 
 .image-meditate {
-  max-height: 20px;
-  max-width: 20px;
+  max-height: 25px;
+  max-width: 25px;
 }
 
 .image-exercise {
-  max-height: 20px;
-  max-width: 20px;
+  max-height: 25px;
+  max-width: 25px;
+}
+
+.text-top-buttons {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  font-size: 15;
+  color: #FFF
 }
 
 .category-buttons {
   display: flex;
   position: absolute;
   flex-direction: row;
-  margin: 100px;
-
-}
-
-.btn-study {
-  height: 70px;
-  width: 70px;
+  margin-left: 157px;
+  margin-top: 115px;
 }
 
 .space-between {
-  width: 100px;
+  width: 125px;
 }
 
-.btn-meditate {
+.btn-activities {
   height: 70px;
-  width: 70px;
-}
-
-.btn-exercise {
-  height: 70px;
-  width: 70px;
+  width: 125px;
+  border-color: #FFF;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #46424D;
 }
 
 .btn-start-activity
