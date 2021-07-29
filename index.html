@@ -7,8 +7,10 @@
   </head>
     <body class="background">
       <h1 class="text-header">INTENTION TIMER</h1>
-      <div class="new-activity">New activity
-        <div class="select-a-category">Select a category
+      <div class="new-activity">
+        <h2 class="text-card-header">New Activity</h2>
+        <div class="select-a-category">
+          <h3 class="category-text">Select a category:</h3>
           <section class="category-buttons">
             <button class="btn-activities" alt="Study-Button">
               <text class="text-top-buttons">Study
@@ -31,20 +33,25 @@
           <text class="activity-text">What would you like to accomplish during this time?
             <input type="text" class="input-activity"></input>
           </text>
-          <text class="actvity-minutes">Minutes
-            <input type="number" class="input-minutes"></input>
-          </text>
-          <text class="activity-seconds">Seconds
-            <input type="number" class="input-seconds"></input>
-          </text>
+          <div class="minutes-seconds">
+            <text class="activity-minutes">Minutes
+              <input type="number" class="input-activity"></input>
+            </text>
+            <text class="activity-seconds">Seconds
+              <input type="number" class="input-activity"></input>
+            </text>
+          </div>
           <button class="btn-start-activity">START ACTIVITY</button>
         </div>
       </div>
-      <div class="past-activities">Past Activities
+      <div class="past-activities">
+        <h2 class="text-card-header">Past Activities</h2>
         <div class="logged-activities">
-          <textarea class="no-logged-activities">You haven't logged any actvities yet. Complete the form to the left to get started!</textarea>
+          <section class="completed-activities"></section>
+          <h4 class="no-logged-activities">You haven't logged any activities yet. Complete the form to the left to get started!</h4>
         </div>
       </div>
+
       <script type="text/javascript" src="main.js"></script>
     </body>
   </head>
