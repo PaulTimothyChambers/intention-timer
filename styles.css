@@ -13,6 +13,7 @@ Error: #EFB7EC */
   display: flex;
   min-height: 100vh;
   background-color: #46424D;
+  font-family: 'Montserrat';
 }
 
 .new-activity {
@@ -68,8 +69,8 @@ Error: #EFB7EC */
 }
 
 .category-text {
-  padding-left: 154px;
-  padding-top: 43px;
+  padding-left: 153px;
+  padding-top: 50px;
   color: #FFF;
 }
 
@@ -82,16 +83,25 @@ Error: #EFB7EC */
   color: #FFF;
 }
 
+.activity-text {
+  display: flex;
+  flex-direction: column;
+  margin-right: 153px;
+  margin-top: 129px;
+  margin-left: 153px;
+  color: #FFF;
+}
+
+.space-between {
+  width: 125px;
+}
+
 .category-buttons {
   display: flex;
   position: absolute;
   flex-direction: row;
   margin-left: 157px;
   margin-top: 115px;
-}
-
-.space-between {
-  width: 125px;
 }
 
 .btn-activities {
@@ -105,27 +115,18 @@ Error: #EFB7EC */
 
 .btn-start-activity{
   margin-top: 19px;
-  margin-left: 577px;
-  margin-right: 160px;
+  margin-left: 564px;
+  margin-right: 152px;
   border-radius: 5px;
   height: 45px;
-}
-
-.activity-text {
-  display: flex;
-  flex-direction: column;
-  margin-right: 151px;
-  margin-top: 144px;
-  margin-left: 149px;
-  color: #FFF;
 }
 
 .minutes-seconds {
   display: flex;
   flex-direction: row;
   margin-top: 77px;
-  margin-left: 160px;
-  margin-right: 160px;
+  margin-left: 153px;
+  margin-right: 153px;
   justify-content: space-between;
 }
 
@@ -152,6 +153,7 @@ Error: #EFB7EC */
   border-right: #46424D;
   border-left: #46424D;
   border-style: solid;
+  color: #FFF;
 }
 
 .input-minutes{
@@ -160,6 +162,14 @@ Error: #EFB7EC */
 
 .input-seconds{
 
+}
+
+.countdown{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  font-size: 24;
+  color: #FFF;
 }
 
 .logged-activities{
@@ -171,4 +181,8 @@ Error: #EFB7EC */
 .no-logged-activities{
   text-align: center;
   width: 75%;
+}
+
+.hidden {
+  display: none;
 }
