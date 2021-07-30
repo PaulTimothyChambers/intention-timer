@@ -14,12 +14,18 @@ class Activity {
   }
   // will push dynamic HTML into completed activities array and changing the appropriate HTML element to match, then invoke saveToStorage()
 // assign vars dynamically to "keys" (instances of Activity class), pushes dynamic html with instance interpolated into this.completed array
-  markComplete() {
-
-  }
+  // markComplete(newInstance) {
+  //   completedActivities.innerHTML +=
+  //     <section class="">
+  //       <div class="">${newInstance.category}</div>
+  //       <div></div>
+  //       <div class="">${newInstance.description},/div>
+  //       etc.
+  //     </section>
+// }
   // will save completed activities to local storage
 // uses docqueryselec.values and passes them to storage along with vars created by markComplete as the keys (which are passed using quotes: "key")
-  saveToStorage() {
-
+  saveToStorage(newInstance) {
+    localStorage.setItem('completedActivity', JSON.stringify(newInstance))
   }
 }
