@@ -44,16 +44,18 @@ exerciseBtn.addEventListener('click', changeExerciseColor);
 // }
 function changeStudyColor() {
 studyBtn.classList.add('study-text-top-button');
-studyBtn.classList.add('study-btn-activities');
-studyBtn.classList.add('study-image-activities');
+studyBtn.classList.add('study-btn-activity');
+studyBtn.classList.add('study-image-activity');
 }
 
 function changeMeditateColor(){
 meditateBtn.classList.add('meditate-text-top-button');
-meditateBtn.classList.add('meditate');
-meditateBtn.classList.add('');
+meditateBtn.classList.add('meditate-btn-activity');
+meditateBtn.classList.add('meditate-image-activity');
 }
 
 function changeExerciseColor(){
-
+exerciseBtn.classList.add('exercise-text-top-button');
+exerciseBtn.classList.add('exercise-btn-activity');
+exerciseBtn.classList.add('exercise-image-activity');
 }
