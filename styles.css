@@ -9,12 +9,18 @@ Meditate: #C278FD
 Exercise: #FD8078
 Error: #EFB7EC */
 
+/* BODY=================== */
+
 .background {
   display: flex;
   min-height: 100vh;
   background-color: #46424D;
   font-family: 'Montserrat';
 }
+
+/* ========*/
+
+/* CARDS=================== */
 
 .new-activity {
   display: flex;
@@ -49,6 +55,24 @@ Error: #EFB7EC */
   background-color: #46424D;
 }
 
+/* ========*/
+
+/* IMAGES=================== */
+
+.image-txt-error {
+  max-height: 15px;
+  max-width: 15px;
+  margin-left: 153px;
+  margin-top: 9px;
+}
+
+.image-min-sec-error {
+  max-height: 15px;
+  position: absolute;
+  max-width: 15px;
+  margin-top: 55px;
+}
+
 .image-activities {
   max-height: 25px;
   max-width: 25px;
@@ -70,6 +94,37 @@ Error: #EFB7EC */
   max-height: 25px;
   max-width: 25px;
   color: #FD8078;
+}
+
+/* ========*/
+
+/* TEXTS=================== */
+
+.text-txt-error {
+  display: flex;
+  position: absolute;
+  margin-left: 176px;
+  margin-top: 10px;
+  color: #EFB7EC;
+  font-size: 12px;
+}
+
+.text-min-error {
+  display: flex;
+  position: absolute;
+  margin-left: 23px;
+  margin-top: 56px;
+  color: #EFB7EC;
+  font-size: 12px;
+}
+
+.text-sec-error {
+  display: flex;
+  position: absolute;
+  margin-left: 23px;
+  margin-top: 56px;
+  color: #EFB7EC;
+  font-size: 12px;
 }
 
 .text-header {
@@ -128,18 +183,9 @@ Error: #EFB7EC */
   color: #FD8078;
 }
 
-.activity-text {
-  display: flex;
-  flex-direction: column;
-  margin-right: 153px;
-  margin-top: 129px;
-  margin-left: 153px;
-  color: #FFF;
-}
+/* ========*/
 
-.space-between {
-  width: 125px;
-}
+/* BUTTONS=================== */
 
 .category-buttons {
   display: flex;
@@ -193,10 +239,14 @@ Error: #EFB7EC */
   height: 45px;
 }
 
+/* ========*/
+
+/* INPUTS=================== */
+
 .minutes-seconds {
   display: flex;
   flex-direction: row;
-  margin-top: 77px;
+  margin-top: 38px;
   margin-left: 153px;
   margin-right: 153px;
   justify-content: space-between;
@@ -210,7 +260,16 @@ Error: #EFB7EC */
   color: #FFF;
 }
 
-.activity-seconds{
+.activity-text {
+  display: flex;
+  flex-direction: column;
+  margin-right: 153px;
+  margin-top: 129px;
+  margin-left: 153px;
+  color: #FFF;
+}
+
+.activity-seconds {
   height: 76px;
   display: flex;
   flex-direction: column;
@@ -218,23 +277,35 @@ Error: #EFB7EC */
   color: #FFF;
 }
 
-.input-activity{
+.input-activity {
   background-color: #46424D;
+  margin-top: 8px;
   border-bottom: #FFF;
   border-top: #46424D;
   border-right: #46424D;
   border-left: #46424D;
   border-style: solid;
+  border-width: thin;
   color: #FFF;
+  outline: none;
 }
 
-.input-minutes{
-
+.input-activity-error {
+  background-color: #46424D;
+  margin-top: 8px;
+  border-bottom: #EFB7EC;
+  border-top: #46424D;
+  border-right: #46424D;
+  border-left: #46424D;
+  border-style: solid;
+  border-width: thin;
+  color: #FFF;
+  outline: none;
 }
 
-.input-seconds{
+/* ========*/
 
-}
+/* DYNAMIC HTML=================== */
 
 .countdown{
   display: flex;
@@ -250,9 +321,48 @@ Error: #EFB7EC */
   color: #FFF;
 }
 
+/* ========*/
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  bottom: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 72px;
+}
+
+.base-timer {
+  position: relative;
+  top: 170px;
+  height: 300px;
+  width: 300px;
+  margin-left: 330px;
+}
+
+/* Removes SVG styling that would hide the time label */
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+/* The SVG path that displays the timer's progress */
+.base-timer__path-elapsed {
+  stroke-width: 2px;
+  stroke: grey;
+}
+
+/* MISC=================== */
+
 .no-logged-activities{
   text-align: center;
   width: 75%;
+}
+
+.space-between {
+  width: 125px;
 }
 
 .hidden {
