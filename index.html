@@ -9,39 +9,53 @@
       <h1 class="text-header">INTENTION TIMER</h1>
       <div class="new-activity">
         <h2 class="text-card-header">New Activity</h2>
-        <p class="countdown hidden"></p>
+        <p class="countdown hidden">
+        </p>
         <div class="select-a-category">
           <h3 class="category-text">Select a category:</h3>
           <section class="category-buttons">
-            <button class="btn-activities" alt="Study-Button" id="study-btn">
-              <text class="text-top-buttons" id="textstudy">Study
-                <img class="image-activities" id="imgstud" src="assets/study.svg">
+            <button class="btn-activities" alt="Study-Button" id="btnStudy">
+              <text class="text-top-buttons" id="txtStudy">Study
+                <img class="image-activities" id="imgStudy" src="assets/study.svg">
+                <img class="image-activities hidden" id="imgStudyAlt" src="assets/study-active.svg">
               </text>
             </button>
             <div class="space-between"></div>
-            <button class="btn-activities" alt="Meditate-Button" id="meditate-btn">
-              <text class="text-top-buttons" id="textmedi">Meditate
-                <img class="image-activities" id="imgmedi" src="assets/meditate.svg">
+            <button class="btn-activities" alt="Meditate-Button" id="btnMeditate">
+              <text class="text-top-buttons" id="txtMeditate">Meditate
+                <img class="image-activities" id="imgMeditate" src="assets/meditate.svg">
+                <img class="image-activities hidden" id="imgMeditateAlt" src="assets/meditate-active.svg">
               </text>
             </button>
             <div class="space-between"></div>
-            <button class="btn-activities" alt="Exercise-Button" id="exercise-btn">
-              <text class="text-top-buttons" id="textexer">Exercise
-                <img class="image-activities" id="imgexer" src="assets/exercise.svg">
+            <button class="btn-activities" alt="Exercise-Button" id="btnExercise">
+              <text class="text-top-buttons" id="txtExercise">Exercise
+                <img class="image-activities" id="imgExercise" src="assets/exercise.svg">
+                <img class="image-activities hidden" id="imgExerciseAlt" src="assets/exercise-active.svg">
               </text>
             </button>
           </section>
-          <text class="activity-text">What would you like to accomplish during this time?
-            <input type="text" class="input-activity"></input>
-          </text>
-          <div class="minutes-seconds">
-            <text class="activity-minutes">Minutes
-              <input type="number" class="input-activity" id="min"></input>
-            </text>
-            <text class="activity-seconds">Seconds
-              <input type="number" class="input-activity" id="sec"></input>
-            </text>
-          </div>
+          <section>
+            <div>
+              <text class="activity-text">What would you like to accomplish during this time?
+                <input type="text" class="input-activity" id="txt"></input>
+              </text>
+              <text class="text-txt-error hidden">A description is required.</text>
+              <img class="image-txt-error hidden" src="assets/warning.svg">
+            </div>
+            <div class="minutes-seconds">
+              <text class="activity-minutes">Minutes
+                <input type="text" class="input-activity" id="min"></input>
+              </text>
+              <text class="text-min-error hidden">A number of minutes is required.</text>
+              <img class="image-min-sec-error hidden" src="assets/warning.svg" id="minError">
+              <text class="activity-seconds">Seconds
+                <input type="text" class="input-activity" id="sec"></input>
+                <text class="text-sec-error hidden">A number of seconds is required.</text>
+                <img class="image-min-sec-error hidden" src="assets/warning.svg" id="secError">
+              </text>
+            </div>
+          </section>
           <button class="btn-start-activity">START ACTIVITY</button>
         </div>
       </div>
