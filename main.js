@@ -1,103 +1,111 @@
-// var countdownTimer = document.querySelector('.countdown');
-// var startActivity = document.querySelector('.btn-start-activity');
-// var inputMinute = document.querySelector('#min');
-// var inputSecond = document.querySelector('#sec');
-
-// var classInstance = new Activity('exercise', 'Doing things', 5, 34);
-
-// startActivity.addEventListener('click', startCount)
-
-// function startCount() {
-//   countdownTimer.classList.remove('hidden');
-//   var classInstance = new Activity('exercise', 'Doing things', 5, 34);
-//   setInterval(countdown, 1000);
-//   var seconds = inputSecond.value;
-//   var minutes = inputMinute.value * 60;
-//   let time = parseInt(minutes) + parseInt(seconds)
-//
-//     function countdown() {
-//       const minutesLeft = Math.floor(time / 60);
-//       let secondsLeft = time % 60;
-//       secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft
-//       document.querySelector('.countdown').innerHTML = `<span>${minutesLeft}: ${secondsLeft}</span>`
-//       time--;
-//     }
-// }
-
 var countdownTimer = document.querySelector('.countdown');
 var startActivity = document.querySelector('.btn-start-activity');
 var inputMinute = document.querySelector('#min');
 var inputSecond = document.querySelector('#sec');
-// var studyBtn = document.querySelector('#study-button');
-// var meditateBtn = document.querySelector('#meditate-button');
-// var exerciseBtn = document.querySelector('#exercise-button');
-// var classInstance = new Activity('exercise', 'Doing things', 5, 34);
+var inputDescription = document.querySelector('#txt');
+var inputActivity = document.querySelector('.input-activity');
+var cardSelectCategory = document.querySelector('.select-a-category');
+
 var btnActivities = document.querySelector('.btn-activities');
-var studyBtn = document.querySelector('#study-btn');
-var meditateBtn = document.querySelector('#meditate-btn');
-var exerciseBtn = document.querySelector('#exercise-btn');
-var textStudy = document.querySelector('#textstudy')
-var textMedi = document.querySelector('#textmedi')
-var textExer = document.querySelector('#textexer')
-var imgStud = document.querySelector('#imgstud')
-var imgMedi = document.querySelector('#imgmedi')
-var imgExer = document.querySelector('#imgexer')
+var btnStudy = document.querySelector('#btnStudy');
+var btnMeditate = document.querySelector('#btnMeditate');
+var btnExercise = document.querySelector('#btnExercise');
+var txtStudy = document.querySelector('#txtStudy');
+var txtMeditate = document.querySelector('#txtMeditate');
+var txtExercise = document.querySelector('#txtExercise');
+var txtTextError = document.querySelector('.text-txt-error');
+var txtMinError = document.querySelector('.text-min-error');
+var txtSecError = document.querySelector('.text-sec-error');
+var imgTextError = document.querySelector('.image-txt-error');
+var imgMinError = document.querySelector('#minError');
+var imgSecError = document.querySelector('#secError');
+var imgStudy = document.querySelector('#imgStudy');
+var imgMeditate = document.querySelector('#imgMeditate');
+var imgExercise = document.querySelector('#imgExercise');
+var imgStudyAlt = document.querySelector('#imgStudyAlt');
+var imgMeditateAlt = document.querySelector('#imgMeditateAlt');
+var imgExerciseAlt = document.querySelector('#imgExerciseAlt');
 
-//query selectors for button and images
+var exerciseCategory;
 
-// startActivity.addEventListener('click', startCount)
-// btnActivities.addEventListener('click', clickActivityButton)
-studyBtn.addEventListener('click', changeStudyColor);
-meditateBtn.addEventListener('click', changeMeditateColor);
-exerciseBtn.addEventListener('click', changeExerciseColor);
+startActivity.addEventListener('click', startCount);
+btnStudy.addEventListener('click', changeStudyColor);
+btnMeditate.addEventListener('click', changeMeditateColor);
+btnExercise.addEventListener('click', changeExerciseColor);
 
-// function startCount() {
-//   countdownTimer.classList.remove('hidden');
-//   var classInstance = new Activity('exercise', 'Doing things', 5, 34);
-//   setInterval(countdown, 1000);
-//   var seconds = inputSecond.value;
-//   var minutes = inputMinute.value * 60;
-//   let time = parseInt(minutes) + parseInt(seconds)
-//
-//     function countdownDisplay() {
-//       const minutesLeft = Math.floor(time / 60);
-//       let secondsLeft = time % 60;
-//       secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft
-//       document.querySelector('.countdown').innerHTML = `<span>${minutesLeft}: ${secondsLeft}</span>`
-//       time--;
-//     }
+function startCount() {
+  var totalInput = inputMinute.value + inputSecond.value;
+  if (totalInput > 0 && Number.isInteger(parseInt(inputMinute.value)) && Number.isInteger(parseInt(inputSecond.value)) && inputDescription.value !== '') {
+    cardSelectCategory.classList.add('hidden');
+    countdownTimer.classList.remove('hidden');
+    var classInstance = new Activity('exercise', inputDescription.value, inputMinute.value, inputSecond.value);
+    classInstance.saveToStorage(classInstance);
+    classInstance.countdown();
+  } else if (inputDescription.value === '') {
+    descError();
+  } else if (!Number.isInteger(parseInt(inputMinute.value))) {
+    minError();
+  } else if (!Number.isInteger(parseInt(inputSecond.value))) {
+    secError();
+  }
+  // } else if (input)
+  // }
+}
 
-//changing colors on the buttons when they are clicked
-//need to take click eventListener to instigate the function
-//if clicled -- check and change
+function descError() {
+  txtTextError.classList.remove('hidden');
+  imgTextError.classList.remove('hidden');
+  txtErrorStyling();
+}
 
-// function changeColor() {
-//
-// }
+function minError() {
+  txtMinError.classList.remove('hidden');
+  imgMinError.classList.remove('hidden');
+  minuteErrorStyling();
+}
+
+function secError() {
+  txtSecError.classList.remove('hidden');
+  imgSecError.classList.remove('hidden');
+  secondErrorStyling();
+}
+
+function secondErrorStyling() {
+  inputSecond.classList.add('input-activity-error');
+  inputSecond.classList.remove('input-activity');
+}
+
+function txtErrorStyling() {
+  inputDescription.classList.add('input-activity-error');
+  inputDescription.classList.remove('input-activity');
+}
+
+function minuteErrorStyling() {
+  inputMinute.classList.add('input-activity-error');
+  inputMinute.classList.remove('input-activity');
+}
+
 function changeStudyColor() {
-  textStudy.classList.add('study-text-top-button');
-  studyBtn.classList.add('study-btn-activity');
-  imgStud.classList.add('study-image-activity');
-  // studyBtn.classList.remove('text-top-buttons');
-  // studyBtn.classList.remove('btn-activites');
-  // studyBtn.classList.remove('image-activities');
-
+  txtStudy.classList.toggle('study-text-top-button');
+  btnStudy.classList.toggle('study-btn-activity');
+  imgStudy.classList.toggle('hidden');
+  imgStudyAlt.classList.toggle('hidden');
 }
 
 function changeMeditateColor(){
-  textMedi.classList.add('meditate-text-top-button');
-  meditateBtn.classList.add('meditate-btn-activity');
-  imgMedi.classList.add('meditate-image-activity');
-  // meditateBtn.classList.remove('text-top-buttons');
-  // meditateBtn.classList.remove('btn-activites');
-  // meditateBtn.classList.remove('image-activities');
+  txtMeditate.classList.toggle('meditate-text-top-button');
+  btnMeditate.classList.toggle('meditate-btn-activity');
+  imgMeditate.classList.toggle('hidden');
+  imgMeditateAlt.classList.toggle('hidden');
 }
 
 function changeExerciseColor(){
-  textExer.classList.add('exercise-text-top-button');
-  exerciseBtn.classList.add('exercise-btn-activity');
-  imgExer.classList.add('exercise-image-activity');
-  // exerciseBtn.classList.remove('text-top-buttons');
-  // exerciseBtn.classList.remove('btn-activites');
-  // exerciseBtn.classList.remove('image-activities');
+  txtExercise.classList.toggle('exercise-text-top-button');
+  btnExercise.classList.toggle('exercise-btn-activity');
+  imgExercise.classList.toggle('hidden');
+  imgExerciseAlt.classList.toggle('hidden');
+}
+
+function errorHandler() {
+
 }
