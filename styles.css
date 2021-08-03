@@ -431,9 +431,21 @@ Error: #EFB7EC */
 
 /* MISC=================== */
 
+.scroll {
+  background-color: red;
+  width: 367px;
+  height: 1000px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  padding: 0px 30px;
+}
+
 .no-logged-activities{
   text-align: center;
   width: 75%;
+  font-size: 12px;
+  font-weight: 300;
 }
 
 .space-between {
