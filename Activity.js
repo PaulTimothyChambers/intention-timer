@@ -13,6 +13,7 @@ class Activity {
     var seconds = this.seconds;
     var minutes = this.minutes * 60;
     let time = parseInt(minutes) + parseInt(seconds);
+    var description = this.description
 
       function countdownDisplay() {
         if (time >= 0 && btnStudy.classList.value === 'btn-activities study-btn-activity') {
@@ -20,6 +21,7 @@ class Activity {
           var secondsLeft = time % 60;
           secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
           countdownTimer.innerHTML = `
+            <text class="text-description">${description}</text>
             <div class="base-timer">
               <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <g class="base-timer__circle">
@@ -36,6 +38,7 @@ class Activity {
           var secondsLeft = time % 60;
           secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
           countdownTimer.innerHTML = `
+            <text class="text-description">${description}</text>
             <div class="base-timer">
               <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <g class="base-timer__circle">
@@ -52,6 +55,7 @@ class Activity {
           var secondsLeft = time % 60;
           secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
           countdownTimer.innerHTML = `
+            <text class="text-description">${description}</text>
             <div class="base-timer">
               <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <g class="base-timer__circle">
@@ -63,8 +67,9 @@ class Activity {
               </span>
             </div>`
           time--;
-        // } else {
-          // markComplete()
+        } else if (time < 0) {
+          btnLogActivity.classList.remove('hidden');
+          txtComplete.classList.remove('hidden');
         }
       }
   }
