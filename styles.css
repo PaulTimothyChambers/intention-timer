@@ -96,9 +96,26 @@ Error: #EFB7EC */
   color: #FD8078;
 }
 
+.image-category-error {
+  position: absolute;
+  max-height: 15px;
+  max-width: 15px;
+  margin-top: 195px;
+  margin-left: 157px;
+}
+
 /* ========*/
 
 /* TEXTS=================== */
+
+.text-category-error {
+  display: flex;
+  position: absolute;
+  margin-left: 177px;
+  margin-top: 196px;
+  color: #EFB7EC;
+  font-size: 12px;
+}
 
 .text-txt-error {
   display: flex;
@@ -241,6 +258,21 @@ Error: #EFB7EC */
   margin-right: 152px;
   border-radius: 5px;
   height: 45px;
+  cursor: pointer;
+}
+
+.btn-start-timer {
+  display: flex;
+  position: absolute;
+  height: 41px;
+  width: 119px;
+  margin-top: 320px;
+  margin-left: 424px;
+  color: #FFF;
+  border-radius: 90px;
+  border: none;
+  background: none;
+  font-size: xx-large;
   cursor: pointer;
 }
 
