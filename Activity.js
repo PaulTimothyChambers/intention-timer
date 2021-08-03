@@ -5,7 +5,7 @@ class Activity {
     this.description = input;
     this.minutes = min;
     this.seconds = sec;
-    this.completed = [];
+    this.completed = false;
   }
 
   countdown() {
@@ -72,10 +72,18 @@ class Activity {
           txtComplete.classList.remove('hidden');
         }
       }
+    this.markComplete()
   }
 
-  // markComplete(newInstance) {
-  //   completedActivities.innerHTML +=
-  // }
+  markComplete() {
+    var key = this.id;
+    var instance = localStorage.getItem(key);
+    var retrievedInstance = JSON.parse(instance);
 
+    // loggedActivity()
+    //
+    //   function loggedActivity() {
+    //
+    //   }
+  }
 }
