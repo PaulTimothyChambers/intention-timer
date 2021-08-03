@@ -9,6 +9,7 @@ var startActivity = document.querySelector('.btn-start-activity');
 var startTimer = document.querySelector('.btn-start-timer');
 var baseTimer = document.querySelector('.base-timer');
 
+var btnLogActivity = document.querySelector('.btn-log-activity');
 var btnActivities = document.querySelector('.btn-activities');
 var btnStudy = document.querySelector('#btnStudy');
 var btnMeditate = document.querySelector('#btnMeditate');
@@ -23,6 +24,7 @@ var txtMinError = document.querySelector('.text-min-error');
 var txtSecError = document.querySelector('.text-sec-error');
 var txtCardHeader = document.querySelector('.text-card-header');
 var txtCategory = document.querySelector('.text-category');
+var txtComplete = document.querySelector('#txtComplete');
 var imgCategoryError = document.querySelector('.image-category-error');
 var imgTextError = document.querySelector('.image-txt-error');
 var imgMinError = document.querySelector('#minError');
@@ -39,6 +41,7 @@ var activityCategory;
 var currentActivity;
 var key;
 
+// btnLogActivity.addEventListener('click', )
 startTimer.addEventListener('click', startTimerNow);
 startActivity.addEventListener('click', determineCategory);
 btnStudy.addEventListener('click', changeStudyColor);
@@ -70,6 +73,7 @@ function checkFields() {
     var secondsLeft = totalInput % 60;
     secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
     countdownTimer.innerHTML = `
+      <text class="text-description">${inputDescription.value}</text>
       <div class="base-timer">
         <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <g class="base-timer__circle">
@@ -86,10 +90,11 @@ function checkFields() {
     var secondsLeft = totalInput % 60;
     secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
     countdownTimer.innerHTML = `
+      <text class="text-description">${inputDescription.value}</text>
       <div class="base-timer">
         <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <g class="base-timer__circle">
-            <circle class="base-timer__study" cx="50" cy="50" r="45"></circle>
+            <circle class="base-timer__meditate" cx="50" cy="50" r="45"></circle>
           </g>
         </svg>
         <span id="base-timer-label" class="base-timer__label">
@@ -102,10 +107,11 @@ function checkFields() {
     var secondsLeft = totalInput % 60;
     secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
     countdownTimer.innerHTML = `
+      <text class="text-description">${inputDescription.value}</text>
       <div class="base-timer">
         <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <g class="base-timer__circle">
-            <circle class="base-timer__study" cx="50" cy="50" r="45"></circle>
+            <circle class="base-timer__exercise" cx="50" cy="50" r="45"></circle>
           </g>
         </svg>
         <span id="base-timer-label" class="base-timer__label">
