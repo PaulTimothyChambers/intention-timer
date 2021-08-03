@@ -38,7 +38,7 @@ var imgExerciseAlt = document.querySelector('#imgExerciseAlt');
 var imgLoggedActivities = document.querySelector('.logged-activities');
 
 var activityCategory;
-var currentActivity;
+// var currentActivity;
 var key;
 
 // btnLogActivity.addEventListener('click', )
@@ -69,13 +69,55 @@ function determineCategory() {
 function checkFields() {
   var totalInput = parseInt(inputMinute.value * 60) + parseInt(inputSecond.value);
   if (totalInput > 0 && Number.isInteger(parseInt(inputMinute.value)) && Number.isInteger(parseInt(inputSecond.value)) && inputDescription.value !== '' && activityCategory === 'Study') {
-    studyTimer();
+    var minutesLeft = Math.floor(totalInput / 60);
+    var secondsLeft = totalInput % 60;
+    secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
+    countdownTimer.innerHTML = `
+      <text class="text-description">${inputDescription.value}</text>
+      <div class="base-timer">
+        <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g class="base-timer__circle">
+            <circle class="base-timer__study" cx="50" cy="50" r="45"></circle>
+          </g>
+        </svg>
+        <span id="base-timer-label" class="base-timer__label">
+          ${minutesLeft}: ${secondsLeft}
+        </span>
+      </div>`;
     changeCardsToTimer();
   } else if (totalInput > 0 && Number.isInteger(parseInt(inputMinute.value)) && Number.isInteger(parseInt(inputSecond.value)) && inputDescription.value !== '' && activityCategory === 'Meditate') {
-    meditateTimer();
+    var minutesLeft = Math.floor(totalInput / 60);
+    var secondsLeft = totalInput % 60;
+    secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
+    countdownTimer.innerHTML = `
+      <text class="text-description">${inputDescription.value}</text>
+      <div class="base-timer">
+        <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g class="base-timer__circle">
+            <circle class="base-timer__meditate" cx="50" cy="50" r="45"></circle>
+          </g>
+        </svg>
+        <span id="base-timer-label" class="base-timer__label">
+          ${minutesLeft}: ${secondsLeft}
+        </span>
+      </div>`;
     changeCardsToTimer();
   } else if (totalInput > 0 && Number.isInteger(parseInt(inputMinute.value)) && Number.isInteger(parseInt(inputSecond.value)) && inputDescription.value !== '' && activityCategory === 'Exercise') {
-    exerciseTimer();
+    var minutesLeft = Math.floor(totalInput / 60);
+    var secondsLeft = totalInput % 60;
+    secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
+    countdownTimer.innerHTML = `
+      <text class="text-description">${inputDescription.value}</text>
+      <div class="base-timer">
+        <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g class="base-timer__circle">
+            <circle class="base-timer__exercise" cx="50" cy="50" r="45"></circle>
+          </g>
+        </svg>
+        <span id="base-timer-label" class="base-timer__label">
+          ${minutesLeft}: ${secondsLeft}
+        </span>
+      </div>`;
     changeCardsToTimer();
   } else if (inputDescription.value === '') {
     descError();
@@ -190,61 +232,4 @@ function changeCardsToTimer() {
   sectionTwo.classList.add('hidden');
   startActivity.classList.add('hidden');
   startTimer.classList.remove('hidden');
-}
-
-function studyTimer() {
-  var totalInput = parseInt(inputMinute.value * 60) + parseInt(inputSecond.value);
-  var minutesLeft = Math.floor(totalInput / 60);
-  var secondsLeft = totalInput % 60;
-  secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
-  countdownTimer.innerHTML = `
-    <text class="text-description">${inputDescription.value}</text>
-    <div class="base-timer">
-      <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <g class="base-timer__circle">
-          <circle class="base-timer__study" cx="50" cy="50" r="45"></circle>
-        </g>
-      </svg>
-      <span id="base-timer-label" class="base-timer__label">
-        ${minutesLeft}: ${secondsLeft}
-      </span>
-    </div>`;
-}
-
-function meditateTimer() {
-  var totalInput = parseInt(inputMinute.value * 60) + parseInt(inputSecond.value);
-  var minutesLeft = Math.floor(totalInput / 60);
-  var secondsLeft = totalInput % 60;
-  secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
-  countdownTimer.innerHTML = `
-    <text class="text-description">${inputDescription.value}</text>
-    <div class="base-timer">
-      <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <g class="base-timer__circle">
-          <circle class="base-timer__meditate" cx="50" cy="50" r="45"></circle>
-        </g>
-      </svg>
-      <span id="base-timer-label" class="base-timer__label">
-        ${minutesLeft}: ${secondsLeft}
-      </span>
-    </div>`;
-}
-
-function exerciseTimer() {
-  var totalInput = parseInt(inputMinute.value * 60) + parseInt(inputSecond.value);
-  var minutesLeft = Math.floor(totalInput / 60);
-  var secondsLeft = totalInput % 60;
-  secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
-  countdownTimer.innerHTML = `
-    <text class="text-description">${inputDescription.value}</text>
-    <div class="base-timer">
-      <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <g class="base-timer__circle">
-          <circle class="base-timer__exercise" cx="50" cy="50" r="45"></circle>
-        </g>
-      </svg>
-      <span id="base-timer-label" class="base-timer__label">
-        ${minutesLeft}: ${secondsLeft}
-      </span>
-    </div>`;
 }
