@@ -164,6 +164,21 @@ Error: #EFB7EC */
   color: #FFF;
 }
 
+.text-complete {
+  margin-left: 388px;
+  margin-top: 297px;
+  font-size: 31px;
+  font-weight: 400;
+  color: #FFF;
+}
+
+.text-description {
+  position: absolute;
+  padding-left: 325px;
+  padding-top: 22px;
+  font-weight: 300;
+}
+
 .text-top-buttons {
   display: flex;
   flex-direction: column-reverse;
@@ -266,13 +281,25 @@ Error: #EFB7EC */
   position: absolute;
   height: 41px;
   width: 119px;
-  margin-top: 320px;
+  margin-top: 298px;
   margin-left: 424px;
   color: #FFF;
   border-radius: 90px;
   border: none;
   background: none;
   font-size: xx-large;
+  cursor: pointer;
+}
+
+.btn-log-activity {
+  position: absolute;
+  margin-top: 481px;
+  margin-left: 370px;
+  height: 45px;
+  width: 225px;
+  font-size: 19px;
+  border-radius: 8px;
+  border-style: hidden;
   cursor: pointer;
 }
 
@@ -364,16 +391,17 @@ Error: #EFB7EC */
   position: absolute;
   width: 300px;
   height: 300px;
-  bottom: 225px;
+  bottom: 205px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 72px;
+  font-weight: 400;
 }
 
 .base-timer {
   position: relative;
-  top: 170px;
+  top: 144px;
   height: 300px;
   width: 300px;
   margin-left: 330px;
