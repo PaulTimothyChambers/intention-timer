@@ -13,6 +13,8 @@
           <p class="countdown hidden">
           </p>
           <h3 class="text-category">Select a category:</h3>
+          <text class="text-category-error hidden">Selection of a category is required</text>
+          <img class="image-category-error hidden" src="assets/warning.svg">
           <section class="btn-categories">
             <button class="btn-activities" alt="Study-Button" id="btnStudy">
               <text class="text-top-buttons" id="txtStudy">Study
@@ -40,23 +42,24 @@
               <text class="activity-text">What would you like to accomplish during this time?
                 <input type="text" class="input-activity" id="txt"></input>
               </text>
-              <text class="text-txt-error hidden">A description is required.</text>
+              <text class="text-txt-error hidden">A description is required</text>
               <img class="image-txt-error hidden" src="assets/warning.svg">
             </div>
             <div class="minutes-seconds">
               <text class="activity-minutes">Minutes
                 <input type="text" class="input-activity" id="min"></input>
               </text>
-              <text class="text-min-error hidden">A number of minutes is required.</text>
+              <text class="text-min-error hidden">A number of minutes is required</text>
               <img class="image-min-sec-error hidden" src="assets/warning.svg" id="minError">
               <text class="activity-seconds">Seconds
                 <input type="text" class="input-activity" id="sec"></input>
-                <text class="text-sec-error hidden">A number of seconds is required.</text>
+                <text class="text-sec-error hidden">A number of seconds is required</text>
                 <img class="image-min-sec-error hidden" src="assets/warning.svg" id="secError">
               </text>
             </div>
           </section>
           <button class="btn-start-activity">START ACTIVITY</button>
+          <button class="btn-start-timer hidden">START</button>
         </div>
       </div>
       <div class="past-activities">
