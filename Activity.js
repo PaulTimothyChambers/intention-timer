@@ -72,14 +72,7 @@ class Activity {
           txtComplete.classList.remove('hidden');
         }
       }
-    // this.markComplete()
   }
-
-  // markComplete() {
-  //   var key = this.id;
-  //   var instance = localStorage.getItem(key);
-  //   var retrievedInstance = JSON.parse(instance);
-  // }
 
   saveToStorage() {
     logged.unshift(this);

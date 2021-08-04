@@ -1,14 +1,3 @@
-
-/* Main background: #2B2733
-Text on main background: #CBC9CF
-Header, cards: #46424D
-Card shadow: #26222D
-Text on header and cards: #FFF
-Study: #B3FD78
-Meditate: #C278FD
-Exercise: #FD8078
-Error: #EFB7EC */
-
 /* BODY=================== */
 
 .background {
@@ -458,13 +447,11 @@ Error: #EFB7EC */
   margin-left: 330px;
 }
 
-/* Removes SVG styling that would hide the time label */
 .base-timer__circle {
   fill: none;
   stroke: none;
 }
 
-/* The SVG path that displays the timer's progress */
 .base-timer__study{
   stroke-width: 2px;
   stroke: #B3FD78;
@@ -485,15 +472,6 @@ Error: #EFB7EC */
 .completed-activities {
   overflow-y: auto;
 }
-/* .scroll {
-  background-color: red;
-  width: 80%;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  text-align: center;
-  padding: 0px 30px;
-} */
 
 .no-logged-activities{
   text-align: center;
