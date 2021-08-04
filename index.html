@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" type="text/css">
+    <title>Intention Timer</title>
   </head>
     <body class="background">
       <h1 class="text-header">INTENTION TIMER</h1>
       <div class="new-activity">
         <h2 class="text-card-header">New Activity</h2>
         <div class="select-a-category">
-          <p class="countdown hidden">
-          </p>
+          <div class="countdown hidden">
+          </div>
           <h3 class="text-category">Select a category:</h3>
           <text class="text-category-error hidden">Selection of a category is required</text>
           <img class="image-category-error hidden" src="assets/warning.svg">
@@ -67,9 +68,8 @@
       </div>
       <div class="past-activities">
         <h2 class="text-card-header">Past Activities</h2>
-        <div class="logged-activities scroll">
-          <section class="completed-activities"></section>
-          <h4 class="no-logged-activities">You haven't logged any activities yet. Complete the form to the left to get started!</h4>
+        <h4 class="no-logged-activities">You haven't logged any activities yet. Complete the form to the left to get started!</h4>
+        <div class="completed-activities">
         </div>
       </div>
       <script type="text/javascript" src="Activity.js"></script>
