@@ -45,4 +45,4 @@
 
 ## Project Specs
 
-* The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/dinner.html)
+* The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/intention-timer-group.html)
