@@ -165,8 +165,8 @@ Error: #EFB7EC */
 }
 
 .text-complete {
-  margin-left: 388px;
-  margin-top: 297px;
+  margin-left: 386px;
+  margin-top: 274px;
   font-size: 31px;
   font-weight: 400;
   color: #FFF;
@@ -281,8 +281,8 @@ Error: #EFB7EC */
   position: absolute;
   height: 41px;
   width: 119px;
-  margin-top: 298px;
-  margin-left: 424px;
+  margin-top: 274px;
+  margin-left: 422px;
   color: #FFF;
   border-radius: 90px;
   border: none;
@@ -293,8 +293,8 @@ Error: #EFB7EC */
 
 .btn-log-activity {
   position: absolute;
-  margin-top: 481px;
-  margin-left: 370px;
+  margin-top: 463px;
+  margin-left: 368px;
   height: 45px;
   width: 225px;
   font-size: 19px;
@@ -385,6 +385,57 @@ Error: #EFB7EC */
   color: #FFF;
 }
 
+.here {
+  margin: 0% 10%;
+  background-color: red;
+  border-radius: 20px;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+}
+
+.logs {
+  background-color: #46424D;
+  border-radius: 15px;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  height: 58px;
+  padding: 2% 3%;
+  margin: 14px 10px;
+}
+
+.study {
+  height: 39px;
+  width: 7px;
+  position: relative;
+  margin-top: -55px;
+  border-radius: 8px;
+  margin-left: 376px;
+  background-color: #B3FD78;
+}
+
+.meditate {
+  height: 39px;
+  width: 7px;
+  position: relative;
+  margin-top: -55px;
+  border-radius: 8px;
+  margin-left: 376px;
+  background-color: #C278FD;
+}
+
+.exercise {
+  height: 39px;
+  width: 7px;
+  position: relative;
+  margin-top: -55px;
+  border-radius: 8px;
+  margin-left: 376px;
+  background-color: #FD8078;
+}
+
 /* ========*/
 
 .base-timer__label {
@@ -431,21 +482,26 @@ Error: #EFB7EC */
 
 /* MISC=================== */
 
-.scroll {
+.completed-activities {
+  overflow-y: auto;
+}
+/* .scroll {
   background-color: red;
-  width: 367px;
-  height: 1000px;
+  width: 80%;
+  height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   text-align: center;
   padding: 0px 30px;
-}
+} */
 
 .no-logged-activities{
   text-align: center;
   width: 75%;
+  color: #FFF;
   font-size: 12px;
   font-weight: 300;
+  margin-left: 55px;
 }
 
 .space-between {
