@@ -1,7 +1,7 @@
 class Activity {
   constructor(category, input, min, sec) {
     this.id = Date.now();
-    this.category = '';
+    this.category = category;
     this.description = input;
     this.minutes = min;
     this.seconds = sec;
@@ -29,7 +29,7 @@ class Activity {
                 </g>
               </svg>
               <span id="base-timer-label" class="base-timer__label">
-                ${minutesLeft}: ${secondsLeft}
+                ${minutesLeft}:${secondsLeft}
               </span>
             </div>`
           time--;
@@ -46,7 +46,7 @@ class Activity {
                 </g>
               </svg>
               <span id="base-timer-label" class="base-timer__label">
-                ${minutesLeft}: ${secondsLeft}
+                ${minutesLeft}:${secondsLeft}
               </span>
             </div>`
           time--;
@@ -63,7 +63,7 @@ class Activity {
                 </g>
               </svg>
               <span id="base-timer-label" class="base-timer__label">
-                ${minutesLeft}: ${secondsLeft}
+                ${minutesLeft}:${secondsLeft}
               </span>
             </div>`
           time--;
@@ -72,18 +72,18 @@ class Activity {
           txtComplete.classList.remove('hidden');
         }
       }
-    this.markComplete()
+    // this.markComplete()
   }
 
-  markComplete() {
-    var key = this.id;
-    var instance = localStorage.getItem(key);
-    var retrievedInstance = JSON.parse(instance);
+  // markComplete() {
+  //   var key = this.id;
+  //   var instance = localStorage.getItem(key);
+  //   var retrievedInstance = JSON.parse(instance);
+  // }
 
-    // loggedActivity()
-    //
-    //   function loggedActivity() {
-    //
-    //   }
+  saveToStorage() {
+    logged.unshift(this);
+    var stringifiedLogCards = JSON.stringify(logged);
+    localStorage.setItem('insta', stringifiedLogCards);
   }
 }

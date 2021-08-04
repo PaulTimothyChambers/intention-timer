@@ -8,6 +8,7 @@ var sectionTwo = document.querySelector('#sectionTwo');
 var startActivity = document.querySelector('.btn-start-activity');
 var startTimer = document.querySelector('.btn-start-timer');
 var baseTimer = document.querySelector('.base-timer');
+var completedActivities = document.querySelector('.completed-activities')
 
 var btnLogActivity = document.querySelector('.btn-log-activity');
 var btnActivities = document.querySelector('.btn-activities');
@@ -38,15 +39,18 @@ var imgExerciseAlt = document.querySelector('#imgExerciseAlt');
 var imgLoggedActivities = document.querySelector('.logged-activities');
 
 var activityCategory;
-// var currentActivity;
+var classInstance;
 var key;
+var logged = []
 
-// btnLogActivity.addEventListener('click', )
+btnLogActivity.addEventListener('click', logActivity)
 startTimer.addEventListener('click', startTimerNow);
 startActivity.addEventListener('click', determineCategory);
 btnStudy.addEventListener('click', changeStudyColor);
 btnMeditate.addEventListener('click', changeMeditateColor);
 btnExercise.addEventListener('click', changeExerciseColor);
+
+checkLocalStorage()
 
 function determineCategory() {
   if (btnStudy.classList.value === 'btn-activities study-btn-activity') {
@@ -81,7 +85,7 @@ function checkFields() {
           </g>
         </svg>
         <span id="base-timer-label" class="base-timer__label">
-          ${minutesLeft}: ${secondsLeft}
+          ${minutesLeft}:${secondsLeft}
         </span>
       </div>`;
     changeCardsToTimer();
@@ -98,7 +102,7 @@ function checkFields() {
           </g>
         </svg>
         <span id="base-timer-label" class="base-timer__label">
-          ${minutesLeft}: ${secondsLeft}
+          ${minutesLeft}:${secondsLeft}
         </span>
       </div>`;
     changeCardsToTimer();
@@ -115,7 +119,7 @@ function checkFields() {
           </g>
         </svg>
         <span id="base-timer-label" class="base-timer__label">
-          ${minutesLeft}: ${secondsLeft}
+          ${minutesLeft}:${secondsLeft}
         </span>
       </div>`;
     changeCardsToTimer();
@@ -129,9 +133,7 @@ function checkFields() {
 }
 
 function startTimerNow() {
-  var classInstance = new Activity(activityCategory, inputDescription.value, inputMinute.value, inputSecond.value);
-  key = classInstance.id;
-  localStorage.setItem(JSON.stringify(key), JSON.stringify(classInstance));
+  classInstance = new Activity(activityCategory, inputDescription.value, inputMinute.value, inputSecond.value);
   classInstance.countdown();
   startTimer.classList.add('hidden');
 }
@@ -232,4 +234,42 @@ function changeCardsToTimer() {
   sectionTwo.classList.add('hidden');
   startActivity.classList.add('hidden');
   startTimer.classList.remove('hidden');
+}
+
+function logActivity(e) {
+  e.preventDefault();
+
+  classInstance.saveToStorage();
+  checkLocalStorage();
+  location.reload();
+}
+
+function checkLocalStorage() {
+  if (localStorage.length) {
+    showLoggedCards();
+  }
+}
+
+function showLoggedCards() {
+  var instance = localStorage.getItem('insta');
+  logged = JSON.parse(instance);
+  if (logged.length) {
+    document.querySelector('.no-logged-activities').classList.add('hidden');
+    populateLoggedActivities()
+  }
+}
+
+function populateLoggedActivities() {
+  completedActivities.innerHTML = ''
+  for (var i=0;i<logged.length;i++) {
+    completedActivities.innerHTML += `
+      <div>
+        <div class="logs">
+          <text>${logged[i].category}</text>
+          <text>${logged[i].minutes} MIN ${logged[i].seconds} SECS</text>
+          <text>${logged[i].description}</text>
+          <div class="${logged[i].category}"></div>
+        </div>
+      </div>`
+  }
 }
